@@ -26,4 +26,4 @@ https://docs.google.com/document/d/1EltXpBEjbY2CUWXOX_omnn2N3xCDJ_ldw_ZPQflgz6s/
 
 
 
-Andrew C CS IA
+Andrew Chen 2024, CS IA
