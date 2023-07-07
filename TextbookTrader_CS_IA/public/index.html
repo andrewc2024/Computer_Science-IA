@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Textbook Trader</title>
+    <link rel ="stylesheet" href="loginStyle.CSS">
+
+
+  </head>
+
+  <body>
+    <div class="h1">
+      Welcome to Textbook Trader!
+    </div>
+    <div>
+      <img style="width: 150px;" src="/img/icons/1.png" alt="text">
+    </div>
+    <div class="inputBox" >
+      <input type = "text" id="email" required = "required">
+      <span> Email</span>
+    </div>
+    <div class="inputBox" >
+      <input type = "password"id="password"  required = "required">
+      <span> Password</span>
+    </div>
+
+    <button class="button-17" role="button" id ="Login">Login</button>
+    <button class="button-17" role="button" id ="SignUp">Sign Up</button>
+
+    <script type="module" src = "/public/login.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  </body>
+</html>
