@@ -387,7 +387,7 @@ function userRating(event) {
             .doc(userID)
             .update({ ratings: textbookRatings })
             .then(() => {
-              location.href = "/public/profile.html";
+              location.href = "/public/search.html";
             });
         });
     });
