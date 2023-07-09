@@ -344,7 +344,7 @@ function userRating(event) {
         } else {
           if (newRating == 0) {
             textbook.numRatings -= 1;
-            textbook.numStars -= textbook.userRating;
+            textbook.numStars -= rating;
             textbookRatings[id] = 0;
           } else {
             textbook.numStars += newRating - textbookRatings[textbook.textbookid];
