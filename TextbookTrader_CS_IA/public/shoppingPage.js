@@ -353,7 +353,7 @@ function userRating(event) {
         }
         db.collection("textbooks").doc(id).update({numRatings: textbook.numRatings, numStars: textbook.numStars});
         db.collection("users").doc(userID).update({ratings: textbookRatings}).then(()=>{
-          location.href = "/public/profile.html";
+          location.href = "/public/shoppingPage.html";
         });
       });
     });
