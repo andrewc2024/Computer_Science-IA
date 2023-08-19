@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textbook trader</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      #featured,
+      #new {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        padding: 20px;
+        row-gap: 30px;
+      }
+
+      .item {
+        margin: 0 1vw;
+        padding: 30px;
+        flex: 1 1 200px;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.12);
+        width: 30vw;
+        background-color: rgb(250, 250, 250);
+      }
+
+      #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+
+      .itemPopup {
+        background: rgb(250, 250, 250);
+        padding: 30px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-height: 80%;
+        overflow: auto; 
+      }
+
+      #overlay img {
+        max-height: 300px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      #overlay .itemPopup .popup {
+        display: flex;
+        gap: 20px;
+      }
+
+      #overlay #closeWindow {
+        position: absolute;
+        float: right;
+      }
+
+      #product1 {
+        width: 90%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <div class="itemPopup">
+        <div class="popup">
+          <div id="left">
+            <img id="image" src="" alt="textbook">
+          </div>
+          <div id="right">
+            <h5 id="subject"></h5>
+            <p id="name"></p>
+            <p id="description"></p>
+            <p id="yearLevel"></p>
+            
+            <p id="averageRating"></p>
+            <p id="price"></p>
+            <p id="vendor"></p>
+            <p id="vendorEmail"></p>
+            <p id="vendorPhone"></p>
+            <p id="dateAdded"></p>
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: #f0c800"></i>
+              <i class="fa-regular fa-star" style="color: #000000"></i>
+            </div><br>
+            <label for="userRating">Give rating: </label><br />
+            <select name="userRating" id="userRating">
+              <option value="0">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <br>
+            <button id="closeWindow">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="header">
+      <a href="#"><img src="/img/icons/logo.png" class="logo" alt="" /></a>
+      <brand>Textbook Trader</brand>
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="shoppingPage.html">Shop</a></li>
+
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="search.html"
+              ><i class="fa-solid fa-magnifying-glass"></i> Search</a
+            >
+          </li>
+          <li>
+            <a href="add.html"
+              ><i class="fa-solid fa-circle-plus"></i> Add a Textbook</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hero">
+      <h4>Offer up your unused textbooks!</h4>
+      <h2>Purchase Second-hand textbooks</h2>
+      <h1>Reduce waste!</h1>
+      <p>Cheaper prices!</p>
+      <button id="scroll">
+        <i class="fa-solid fa-arrow-down"></i> Shop Now
+      </button>
+    </section>
+
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <h6>IB Textbooks!</h6>
+      </div>
+      <div class="fe-box">
+        <h6>Easy use!</h6>
+      </div>
+      <div class="fe-box">
+        <h6>Save Money</h6>
+      </div>
+      <div class="fe-box">
+        <h6>Be Sustainable</h6>
+      </div>
+      <div class="fe-box">
+        <h6>Happy Trading</h6>
+      </div>
+      <div class="fe-box">
+        <h6>Self-listing</h6>
+      </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>Featured Textbooks</h2>
+      <p>All Subjects!</p>
+      <div id="featured">
+        <template id="productTemplate">
+          <div class="item">
+            <div class="outline">
+              <span id="name"></span>
+              <h5 id="subject"></h5>
+              <div class="star">
+                <i class="fa-solid fa-star" style="color: #f0c800"></i>
+                <i class="fa-regular fa-star" style="color: #000000"></i>
+              </div>
+              <h4 id="price"></h4>
+            </div>
+            <button id="unlike" style="all: unset; cursor: pointer">
+              <i
+                class="fa-solid fa-heart"
+                style="color: #ad0000"
+              ></i>
+              <i
+                class="fa-regular fa-heart"
+                style="color: #000000"
+              ></i>
+            </button>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>New Arrivals</h2>
+      <div id="new"></div>
+    </section>
+    <script src="shoppingPage.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  </body>
+</html>
