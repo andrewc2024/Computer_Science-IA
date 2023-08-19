@@ -1,7 +1,7 @@
 # Computer_Science-IA
 Textbook Trader CS IA
 
-Website designed to allow for the trading of textbooks. Requires the use of Firebase to work.
+Website designed to allow for the trading of textbooks for a school to implement (coded for CISHK emails only). Requires the use of Firebase to work. 
 
 
 TO-DO:
